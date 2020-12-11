@@ -12,7 +12,7 @@ Vamos testar um lance? Será que uma âncora é mesmo batata de dar certo? [Cliq
 - [Mizukage](#ancora3)
 - [Raikage](#ancora4)
 - [Tsuchikage](#ancora4)
--
+
 <a id="ancora1"></a>
 ## Hokage
 > Loren Ipsum
@@ -82,5 +82,7 @@ Donec nec mattis dui, quis sagittis magna. Praesent in sollicitudin erat, non mo
 
 -
 
--
-## <a name=“anchor”><a/>Âncora
+<a id=“anchor”><a/>
+## Âncora
+  
+  Testando o texto
