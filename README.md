@@ -87,6 +87,8 @@ Donec nec mattis dui, quis sagittis magna. Praesent in sollicitudin erat, non mo
   
   Testando o texto
 
-`<img src="data:image/png;base64,{código da imagem em base 64}">`
+|definição|blablabla|
+|---|---|
+|qr code|`<img src="data:image/png;base64,{código da imagem em base 64}">`|
 ``<img src="data:image/png;base64,{código da imagem em base 64}">``
 <code><img src="data:image/png;base64,{código da imagem em base 64}"></code>
