@@ -13,6 +13,12 @@ Vamos testar um lance? Será que uma âncora é mesmo batata de dar certo? [Cliq
 - [Raikage](#ancora4)
 - [Tsuchikage](#ancora4)
 
+Figura grande
+![Fluxo Transacional peq](aasitamk.github.io/fluxo-transacional-pt.png)
+
+Figura pequena
+![Fluxo Transacional peq](aasitamk.github.io/fluxo-transacional-pt-menor.png)
+
 <a id="ancora1"></a>
 ## Hokage
 > Loren Ipsum
