@@ -1,100 +1,44 @@
-# Aasi's Solo Project
+# API Document Template
 
-### Super Duper Intro
-This page is all about getting to know GitHub and its tools. Nothing interesting to you outsiders though - all for internal experimentation.
-<br><br>
-So... thanx'n goodbye! :)
-Vamos testar um lance? Será que uma âncora é mesmo batata de dar certo? [Clique aqui](#anchor) e veja se vc vai ser levado para o título Âncora, lá embaixo.
-<a name="ancora"></a>
-# Os 5 Granges Kages
-- [Hokage](#ancora1)
-- [Kazekage](#ancora2)
-- [Mizukage](#ancora3)
-- [Raikage](#ancora4)
-- [Tsuchikage](#ancora4)
+This page contains the API documentation for the `findNeedles` method.
 
-Figura grande
-![Fluxo Transacional peq](aasitamk.github.io/fluxo-transacional-pt.png)
+## Overview
 
-Figura pequena
-![Fluxo Transacional peq](aasitamk.github.io/fluxo-transacional-pt-menor.png)
+The `findNeedles` method counts the number of occurrances of up to five specific words within a given text.
+<br/> Here is a Java sample, followed by the description of its query parameters:
 
-<a id="ancora1"></a>
-## Hokage
-> Loren Ipsum
-Donec nec mattis dui, quis sagittis magna. Praesent in sollicitudin erat, non molestie velit. Nam tempor metus et laoreet sodales. Sed eu mauris odio. Maecenas at feugiat mi. Nam venenatis accumsan mi, in dictum nisl. Phasellus laoreet nec sem at volutpat.
-[Topo](#ancora)
-<a id="ancora2"></a>
-## Kazekage
-> Loren Ipsum
-Donec nec mattis dui, quis sagittis magna. Praesent in sollicitudin erat, non molestie velit. Nam tempor metus et laoreet sodales. Sed eu mauris odio. Maecenas at feugiat mi. Nam venenatis accumsan mi, in dictum nisl. Phasellus laoreet nec sem at volutpat.
-[Topo](#ancora)
-<a id="ancora3"></a>
-## Mizukage
-> Loren Ipsum
-Donec nec mattis dui, quis sagittis magna. Praesent in sollicitudin erat, non molestie velit. Nam tempor metus et laoreet sodales. Sed eu mauris odio. Maecenas at feugiat mi. Nam venenatis accumsan mi, in dictum nisl. Phasellus laoreet nec sem at volutpat.
-[Topo](#ancora)
-<a id="ancora4"></a>
-## Raikage
-> Loren Ipsum
-Donec nec mattis dui, quis sagittis magna. Praesent in sollicitudin erat, non molestie velit. Nam tempor metus et laoreet sodales. Sed eu mauris odio. Maecenas at feugiat mi. Nam venenatis accumsan mi, in dictum nisl. Phasellus laoreet nec sem at volutpat.
-[Topo](#ancora)
-<a id="ancora5"></a>
-## Tsuchikage
-> Loren Ipsum
-Donec nec mattis dui, quis sagittis magna. Praesent in sollicitudin erat, non molestie velit. Nam tempor metus et laoreet sodales. Sed eu mauris odio. Maecenas at feugiat mi. Nam venenatis accumsan mi, in dictum nisl. Phasellus laoreet nec sem at volutpat.
-[Topo](#ancora)
--
+<aside class="request"><span class="method">METHOD</span> <span class="endpoint">findNeedles</span></aside>
 
--
+```java
+public static void findNeedles(String haystack, String[] needles) {
+  if (needles.length > 5) {
+    System.err.println("Too many words!");
+  } else {
+    int[] countArray = new int[needles.length];
+    for (int i = 0; i < needles.length; i++) {
+      String[] words = haystack.split("[ \"\'\t\n\b\f\r]", 0);
+      for (int j = 0; j < words.length; j++) {
+        if (words[j].compareTo(needles[i]) == 0) {
+        countArray[i]++;
+        }
+      }
+    }
+    for (int j = 0; j < needles.length; j++) {
+    System.out.println(needles[j] + ": " + countArray[j]);
+    }
+  }
+}
+```
 
--
+|Parameter|Description|Type|Mandatory?|
+|---|---|---|---|
+|haystack|Text to be searched in.|string|yes|
+|needles|Words to be searched within the given text.|string|yes|
 
--
+## Responses
 
--
+**5 words or less = successful operation**
+{needle}: {number}
 
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
-<a id="anchor"><a/>
-## Âncora
-  
-  Testando o texto
-
-|definição|blablabla|
-|---|---|
-|qr code|`<img src="data:image/png;base64,{código da imagem em base 64}">`|
-``<img src="data:image/png;base64,{código da imagem em base 64}">``
-<code><img src="data:image/png;base64,{código da imagem em base 64}"></code>
+**more than 5 words = error message**
+"Too many words!"
