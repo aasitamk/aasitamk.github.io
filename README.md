@@ -7,8 +7,7 @@ This page contains the API documentation for the `findNeedles` method.
 The *`findNeedles`* method counts the number of occurrances of up to five specific words within a given text.
 <br/> Here is a Java sample, followed by the description of its query parameters:
 
-<aside class="warning">METHOD</aside>
-<aside class="notice">findNeedles</aside><aside class="request">METHOD</aside>
+**METHOD:** *findNeedles*
 ```
 public static void findNeedles(String haystack, String[] needles) {
   if (needles.length > 5) {
@@ -31,14 +30,14 @@ public static void findNeedles(String haystack, String[] needles) {
 ```
 
 |Parameter|Description|Type|Mandatory?|
-|:---:|:---:|:---:|:---:|
+|:---:|---|:---:|:---:|
 |haystack|Text to be inspected.|string|yes|
 |needles|Words to be searched within the given text.|string|yes|
 
 ## Responses
 
-**5 words or less = successful operation**
+### 5 words or less = successful operation
 {needle}: {number}
 
-**more than 5 words = error message**
+### more than 5 words = error message
 "Too many words!"
