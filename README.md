@@ -1,11 +1,11 @@
 # EXERCISE 1
 
-## Description:
+## Description
 
 > Infosec identified a security incident related to the leakage of AWS credentials.<br>
 > The Infosec Incident Lead must carry out the steps 1 to 4 below to contain or prevent a possible attack.
 
-## Procedure:
+## Procedure
 
 #### STEP 1 - Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.
 
@@ -21,33 +21,29 @@
 **1.4-** Request the removal of the affected user from all groups:<br/>
 ```nu sec iam remove <user> <groups>```
   
-#### STEP 2 - Notify the relevant stakeholders via the Slack tool.
+#### STEP 2 - Notify the relevant stakeholders via the Slack platform.
 
-  **2.1.** Send the following message to the affected user:<br/>
-  *"Your AWS permissions have been temporarily suspended pending an investigation into a possible compromise. If you have any questions, please contact us. We request  confidentiality until Infosec releases the investigation results."*
+**2.1.** Send the following message to the affected Nubanker:<br/>
+*"Your AWS permissions have been temporarily suspended pending an investigation into a possible compromise. If you have any questions, please contact us. We request  confidentiality until Infosec releases the investigation results."*
   
-  **2.2.** Send the following message to the affected user’s Tech Manager/Eng. Manager:<br/>
-  *"The user {user_name}’s AWS account permissions have been temporarily suspended pending an investigation into a possible compromisse. We request you to support the employee through understanding the incident and keeping it private until Infosec releases the investigation results."*
+**2.2.** Send the following message to the affected Nubanker’s manager:<br/><br/>
+*"The Nubanker {name}’s AWS account permissions have been temporarily suspended pending an investigation into a possible compromise. We request you to support the Nubanker through understanding the incident and keeping it private until Infosec releases the investigation results."*
   
-**Step 3 - Revoke the affected AWS credentials.**
+#### STEP 3 - Revoke the affected AWS credentials.
 
-  **3.1.** Find a user with *admin* access and permissions:<br/>
-  ```
-  nu sec iam show group infosec-permissions-admin
-  ```
+**3.1.** Find a user with *admin* access and permissions:<br/>
+```nu sec iam show group infosec-permissions-admin```
   
-  **3.2.** Request the deletion of the affected credentials using the AWS console:<br/>
-  ```
-  nu sec iam delete <user> Source
-  ```
+**3.2.** Request the deletion of the affected credentials using the AWS console:<br/>
+```nu sec iam delete <user> Source```
   
-**Step 4 – Provide the affected user with new credentials.**
+#### STEP 4 – Provide the affected user with new credentials.
 
-  **4.1.** Generate a new keypair (public key + private key) via AWS console.
+**4.1.** Generate a new keypair (public key + private key) via AWS console.
 
-  **4.2.** Send the new keypair to the affected user via Slack direct message.
+**4.2.** Send the new keypair to the affected user via Slack direct message.
 
-  **4.3.** Instruct the affected user into updating his AWS Keys in all places they are referenced to, such as the *.bash_profile*. This action can be performed using nudev/setupnu.sh (*https://github.com/nubank/nudev/blob/master/setupnu.sh* or *https://github.com/nubank/nu-setup*).
+**4.3.** Instruct the affected user into updating his AWS Keys in all places they are referenced to, such as the *.bash_profile*. This action can be performed using nudev/setupnu.sh (*https://github.com/nubank/nudev/blob/master/setupnu.sh* or *https://github.com/nubank/nu-setup*).
 
 Refer to the [AWS Developer Guide](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) for further information about working with credentials.
 
