@@ -1,12 +1,13 @@
 # EXERCISE 1
 
-## Incident Description:
+## Description:
 
-A security incident related to the leakage of AWS credentials has been identified by Infosec. A possible attack must be either contained or prevented through the articulation of the steps contained in the procedure below.
+>A security incident related to the leakage of AWS credentials has been identified by Infosec.
+>A possible attack must be either contained or prevented through the articulation of the steps contained in the procedure below.
 
 ## Procedure:
 
-##### Step 1- Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.
+### Step 1- Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.
 
    **1.1-** Find an Infosec user with the *admin* role:<br/>
    ```nu sec iam show group infosec-permissions-admin```
@@ -26,7 +27,7 @@ A security incident related to the leakage of AWS credentials has been identifie
   nu sec iam remove <user> <groups>
   ```
   
-#### Step 2 - Notify the relevant stakeholders via Slack tool.
+### Step 2 - Notify the relevant stakeholders via Slack tool.
 
   **2.1.** Send the following message to the affected user:
   *"Your AWS permissions have been temporarily suspended pending an investigation into a possible compromise. If you have any questions, please contact us. We request  confidentiality until Infosec releases the investigation results."*
@@ -54,41 +55,41 @@ A security incident related to the leakage of AWS credentials has been identifie
 
   **4.3.** Instruct the affected user into updating his AWS Keys in all places they are referenced to, such as the *.bash_profile*. This action can be performed using nudev/setupnu.sh (*https://github.com/nubank/nudev/blob/master/setupnu.sh* or *https://github.com/nubank/nu-setup*).
 
-Refer to the [AWS SDK for Java](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) developer guide for further information about working with credentials.
+Refer to the [AWS Developer Guide](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) for further information about working with credentials.
 
 ---
 
 # EXERCISE 2
 
-# API Document Template
+## API Document Template
 
-API documentation for the **_`findNeedles`_** method.
+API documentation for the `findNeedles` method.
 
-## Find Needles in a Haystack
+### Find Needles in a Haystack
 
-The **_`findNeedles`_** method counts the number of occurrances of up to five specific words (*needles*) within a given text (*haystack*).
+The `findNeedles` method counts the number of occurrances of up to five specific words (*needles*) within a given text (*haystack*).
 
 Here is a sample with a Java code snippet, followed by details of its parameters and the possible outputs:
 
-**METHOD:** *`findNeedles`*
+**METHOD:** `findNeedles`
 ```java
 public static void findNeedles(String haystack, String[] needles) {
-  if (needles.length > 5) {
-    System.err.println("Too many words!");
-  } else {
-    int[] countArray = new int[needles.length];
-    for (int i = 0; i < needles.length; i++) {
-      String[] words = haystack.split("[ \"\'\t\n\b\f\r]", 0);
-      for (int j = 0; j < words.length; j++) {
-        if (words[j].compareTo(needles[i]) == 0) {
-        countArray[i]++;
-        }
+   if (needles.length > 5) {
+      System.err.println("Too many words!");
+   } else {
+      int[] countArray = new int[needles.length];
+      for (int i = 0; i < needles.length; i++) {
+         String[] words = haystack.split("[ \"\'\t\n\b\f\r]", 0);
+         for (int j = 0; j < words.length; j++) {
+            if (words[j].compareTo(needles[i]) == 0) {
+            countArray[i]++;
+            }
+         }
       }
-    }
-    for (int j = 0; j < needles.length; j++) {
-    System.out.println(needles[j] + ": " + countArray[j]);
-    }
-  }
+      for (int j = 0; j < needles.length; j++) {
+      System.out.println(needles[j] + ": " + countArray[j]);
+      }
+   }
 }
 ```
 
@@ -99,9 +100,9 @@ public static void findNeedles(String haystack, String[] needles) {
 
 <br/>**POSSIBLE OUTPUTS:**
 
-* For **up to 5** needles searched, the output displays the number of ocurrances of each needle:
+* For **up to 5** needles searched, the output displays the number of ocurrances for each needle:
 <br/>`[needle_value]: [total_ocurrances]`
 
-* If **more than 5** needles are searched, the output displays an error with the following message:
+* If **more than 5** needles are searched, the output displays the following error message:
 <br/>`"Too many words!"`
 
