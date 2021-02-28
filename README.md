@@ -4,10 +4,7 @@
 
 A security incident related to the leakage of AWS credentials has been identified by Infosec. A possible attack must be either contained or prevented through the articulation of the steps contained in the procedures below.
 
-*	[Infosec Incident Lead](#infosec-incident-lead)
-*	[Nubanker](#nubanker)
-
-## For the Infosec Incident Lead
+### For the Infosec Incident Lead
 
 #### Procedure:
 
