@@ -1,3 +1,7 @@
+# API Document Template
+
+API documentation for the `findNeedles` method.
+
 ## Find Needles in a Haystack
 
 The **`findNeedles`** method counts the number of occurrances of up to five specific words (*needles*) within a given text (*haystack*).
@@ -33,9 +37,9 @@ public static void findNeedles(String haystack, String[] needles) {
 
 <br/>**POSSIBLE OUTPUTS:**
 
-* For up to 5 needles searched, the output displays the number of ocurrances of each needle:
+* For **up to 5** needles searched, the output displays the number of ocurrances of each needle:
 <br/>`[needle_value]: [total_ocurrances]`
 
-* If more than 5 needles are searched, the output displays an error with the following message:
+* If **more than 5** needles are searched, the output displays an error with the following message:
 <br/>`"Too many words!"`
 
