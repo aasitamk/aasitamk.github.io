@@ -6,7 +6,7 @@ A security incident related to the leakage of AWS credentials has been identifie
 
 ## Procedure:
 
-### Step 1 - Remove all permissions from the affected AWS user (do not revoke their credentials).
+#### Step 1 - Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.
 
   **1.1.** Find an Infosec user with the *admin* role:
   ```
@@ -28,7 +28,7 @@ A security incident related to the leakage of AWS credentials has been identifie
   nu sec iam remove <user> <groups>
   ```
   
-### Step 2 - Notify the relevant stakeholders via Slack tool.
+#### Step 2 - Notify the relevant stakeholders via Slack tool.
 
   **2.1.** Send the following message to the affected user:
   *"Your AWS permissions have been temporarily suspended pending an investigation into a possible compromise. If you have any questions, please contact us. We request  confidentiality until Infosec releases the investigation results."*
