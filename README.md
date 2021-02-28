@@ -1,24 +1,22 @@
 # EXERCISE 1
 
-
-
 ### Incident Description:
 
-A security incident related to the leakage of AWS credentials has been identified by Infosec. A possible attack must be either contained or prevented through the articulation of the steps contained in the following procedure.
-
-### Audiences:
+A security incident related to the leakage of AWS credentials has been identified by Infosec. A possible attack must be either contained or prevented through the articulation of the steps contained in the procedures below.
 
 *	[Infosec Incident Lead](#infosec-incident-lead)
-*	[Nubankers](#nubankers)
+*	[Nubanker](#nubanker)
 
-### Infosec Incident Lead
+### For the Infosec Incident Lead
 
 #### Procedure:
 
-**Step 1 - Remove all permissions from the affected AWS user without revoking their credentials.**
+**Step 1 - Remove all permissions from the affected AWS user (do not revoke their credentials).**
 
   1.1. Find an Infosec user with the *admin* role:
-  ``` nu sec iam show group infosec-permissions-admin```
+  ```
+  nu sec iam show group infosec-permissions-admin
+  ```
   
   1.2. Request the removal of all inline policies from the affected IAM user:
   ```nu sec iam disallow <user> Source```
