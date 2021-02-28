@@ -9,7 +9,7 @@ The `findNeedles` method counts the number of occurrances of up to five specific
 Here is a sample with a Java code snippet, followed by details of its parameters and the possible outputs:
 
 **METHOD:** _findNeedles_
-```
+```java
 public static void findNeedles(String haystack, String[] needles) {
   if (needles.length > 5) {
     System.err.println("Too many words!");
@@ -35,10 +35,10 @@ public static void findNeedles(String haystack, String[] needles) {
 |haystack|Text to be inspected.|string|yes|
 |needles|Words to be searched within the given text.|string|yes|
 
-**POSSIBLE OUTPUTS:**
+<br/>**POSSIBLE OUTPUTS:**
 
 * For up to 5 words, the output displays the number of ocurrances of each needle:
-<br/>*`needle_value: total_ocurrances`*
+<br/>`[needle_value]: [total_ocurrances]`
 
 * For more than 5 words, the output will display an error with the following message:
 <br/>`"Too many words!"`
