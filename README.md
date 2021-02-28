@@ -31,7 +31,7 @@ public static void findNeedles(String haystack, String[] needles) {
 ```
 
 |Parameter|Description|Type|Mandatory?|
-|---|---|---|---|
+|:---:|:---:|:---:|:---:|
 |haystack|Text to be inspected.|string|yes|
 |needles|Words to be searched within the given text.|string|yes|
 
