@@ -9,7 +9,7 @@
 
 ## Procedure
 
-#### STEP 1 - Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.
+#### **STEP 1 - Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.**
 
 **1.1-** Find a user with the permission to administer IAM permissions:<br/>
 ```nu sec iam show group infosec-permissions-admin```
