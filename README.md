@@ -1,3 +1,5 @@
+# Exercise 1 - Compromised AWS Account Credentials
+
 # API Document Template
 
 API documentation for the **_`findNeedles`_** method.
