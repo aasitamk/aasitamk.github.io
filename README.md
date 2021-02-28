@@ -2,32 +2,32 @@
 
 ## Description:
 
->A security incident related to the leakage of AWS credentials has been identified by Infosec.<br>
->A possible attack must be either contained or prevented through the articulation of the steps contained in the procedure below.
+> Infosec identified a security incident related to the leakage of AWS credentials.<br>
+> The Infosec Incident Lead must carry out the steps 1 to 4 below to contain or prevent a possible attack.
 
 ## Procedure:
 
-**STEP 1 - Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.**
+#### STEP 1 - Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.
 
 **1.1-** Find an Infosec user with the *admin* role:<br/>
 ```nu sec iam show group infosec-permissions-admin```
   
-**1.2-** Request the removal of all inline policies from the affected IAM user:<br/>
+**1.2-** Request the removal of the inline policies from the affected IAM user:<br/>
 ```nu sec iam disallow <user> Source```
   
-**1.3-** Request the identification of all IAM groups for the affected user:<br/>
+**1.3-** Request the identification of the IAM groups for the affected user:<br/>
 ```nu sec iam show <user>```
   
 **1.4-** Request the removal of the affected user from all groups:<br/>
 ```nu sec iam remove <user> <groups>```
   
-#### Step 2 - Notify the relevant stakeholders via Slack tool.
+#### STEP 2 - Notify the relevant stakeholders via the Slack tool.
 
-  **2.1.** Send the following message to the affected user:
+  **2.1.** Send the following message to the affected user:<br/>
   *"Your AWS permissions have been temporarily suspended pending an investigation into a possible compromise. If you have any questions, please contact us. We request  confidentiality until Infosec releases the investigation results."*
   
-  **2.2.** Send the following message to the affected user’s Tech Manager/Eng. Manager:
-  *"The user <user_name>’s AWS account permissions have been temporarily suspended pending an investigation into a possible compromisse. We request you to support the employee through understanding the incident and keeping it private until Infosec releases the investigation results."*
+  **2.2.** Send the following message to the affected user’s Tech Manager/Eng. Manager:<br/>
+  *"The user {user_name}’s AWS account permissions have been temporarily suspended pending an investigation into a possible compromisse. We request you to support the employee through understanding the incident and keeping it private until Infosec releases the investigation results."*
   
 **Step 3 - Revoke the affected AWS credentials.**
 
