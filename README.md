@@ -30,7 +30,7 @@ public static void findNeedles(String haystack, String[] needles) {
 }
 ```
 
-|Parameter|Description|Type|Mandatory?|
+|Parameter|Description|Type|Required|
 |---|---|---|---|
 |haystack|Text to be inspected.|string|yes|
 |needles|Words to be searched within the given text.|string|yes|
@@ -40,6 +40,6 @@ public static void findNeedles(String haystack, String[] needles) {
 * For up to 5 words, the output displays the number of ocurrances of each needle:
 <br/>`[needle_value]: [total_ocurrances]`
 
-* For more than 5 words, the output will display an error with the following message:
+* For more than 5 words, the output displays an error with the following message:
 <br/>`"Too many words!"`
 
