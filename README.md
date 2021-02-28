@@ -1,14 +1,14 @@
 # API Document Template
 
-[This page](aasitamk.github.io/TESTE.html) contains the API documentation for the `findNeedles` method.
+This page contains the API documentation for the `findNeedles` method.
 
-## Overview
+## Find Needles in a Haystack
 
-The `findNeedles` method counts the number of occurrances of up to five specific words within a given text.
+The *`findNeedles`* method counts the number of occurrances of up to five specific words within a given text.
 <br/> Here is a Java sample, followed by the description of its query parameters:
 
-<aside class="request"><span class="method">METHOD</span> <span class="endpoint">findNeedles</span></aside>
-
+<aside class="warning">METHOD</aside>
+<aside class="notice">findNeedles</aside><aside class="request">METHOD</aside>
 ```
 public static void findNeedles(String haystack, String[] needles) {
   if (needles.length > 5) {
@@ -32,7 +32,7 @@ public static void findNeedles(String haystack, String[] needles) {
 
 |Parameter|Description|Type|Mandatory?|
 |---|---|---|---|
-|haystack|Text to be searched in.|string|yes|
+|haystack|Text to be inspected.|string|yes|
 |needles|Words to be searched within the given text.|string|yes|
 
 ## Responses
