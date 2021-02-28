@@ -1,5 +1,7 @@
 # EXERCISE 1
 
+--
+
 ## Description
 
 > Infosec identified a security incident related to the leakage of AWS credentials.<br>
@@ -50,6 +52,8 @@ Refer to the [AWS Developer Guide](https://docs.aws.amazon.com/sdk-for-java/v1/d
 ---
 
 # EXERCISE 2
+
+-
 
 ## API Document Template
 
