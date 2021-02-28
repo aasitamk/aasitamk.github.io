@@ -9,7 +9,7 @@ A security incident related to the leakage of AWS credentials has been identifie
 ##### Step 1- Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.
 
    **1.1-** Find an Infosec user with the *admin* role:<br/>
-   > nu sec iam show group infosec-permissions-admin
+   ```nu sec iam show group infosec-permissions-admin```
   
    **1.2-** Request the removal of all inline policies from the affected IAM user:
    ```
