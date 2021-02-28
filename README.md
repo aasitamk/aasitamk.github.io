@@ -1,4 +1,4 @@
-# Exercise 1 - Compromised AWS Account Credentials
+### Exercise 1 - Compromised AWS Account Credentials
 
 # API Document Template
 
