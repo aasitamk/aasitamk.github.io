@@ -9,7 +9,7 @@
 
 ## Procedure
 
-#### **STEP 1 - Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.**
+#### **STEP 1** - Remove all permissions from the affected AWS user. Credentials must not be revoked at this stage.
 
 **1.1-** Find a user with the permission to administer IAM permissions:<br/>
 ```nu sec iam show group infosec-permissions-admin```
@@ -23,7 +23,7 @@
 **1.4-** Request the removal of the affected IAM user from all listed groups:<br/>
 ```nu sec iam remove <user> <groups>```
   
-#### STEP 2 - Notify the relevant stakeholders via the Slack platform.
+#### **STEP 2** - Notify the relevant stakeholders via the Slack platform.
 
 **2.1.** Send the following message to the affected user:<br/>
 *"Your AWS permissions have been temporarily suspended pending an investigation into a possible compromise. If you have any questions, please contact us. We request  confidentiality until Infosec releases the investigation results."*
@@ -31,7 +31,7 @@
 **2.2.** Send the following message to the affected user’s manager:<br/>
 *"The Nubanker {name}’s AWS account permissions have been temporarily suspended pending an investigation into a possible compromise. We request you to support the Nubanker through understanding the incident and keeping it confidential until Infosec releases the investigation results."*
   
-#### STEP 3 - Revoke the affected AWS credentials.
+#### **STEP 3** - Revoke the affected AWS credentials.
 
 **3.1.** Find a user with the permission to administer IAM permissions:<br/>
 ```nu sec iam show group infosec-permissions-admin```
@@ -39,7 +39,7 @@
 **3.2.** Request the deletion of the affected credentials using the AWS console:<br/>
 ```nu sec iam delete <user> Source```
   
-#### STEP 4 – Provide the affected user with new credentials.
+#### **STEP 4** – Provide the affected user with new credentials.
 
 **4.1.** Generate a new keypair (public key + private key) via AWS console.
 
