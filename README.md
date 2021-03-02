@@ -6,8 +6,8 @@
 
 ## Description
 
-> Infosec identified a security incident related to the leakage of AWS credentials.<br>
-> Carry out the steps 1 to 4 below to contain or prevent a possible attack.
+> A security incident related to the leakage of AWS credentials has been indentified by **Infosec**.<br>
+> The steps 1 to 4 below must be carried out in order to contain or prevent a possible attack.
 
 ## Procedure
 
@@ -33,13 +33,13 @@
   
 #### **STEP 4** - Send a message through the affected user’s Slack profile to their Tech/Eng Manager:
 
-*"There has been wrongful activity using this engineer's AWS account. Please inform them that permissions associated with it have been temporarily blocked and direct them through further understanding the incident. Please advise them to keep the incident private until* the all clear *is given by Infosec."*
+*"There has been wrongful activity using this engineer's AWS account. Please inform them that permissions associated with it have been temporarily blocked, and direct them through further understanding the incident. Please advise them to keep the incident private until* the all clear *is given by Infosec."*
   
-#### **STEP 5** - Request the user from STEP 1 to revoke the affected AWS credentials using the AWS console. 
+#### **STEP 5** - Request an authorized user (STEP 1.1) to revoke the affected AWS credentials using the AWS console. 
   
-#### **STEP 6** – Generate new credentials and a new keypair (public key + private key) via AWS console.
+#### **STEP 6** – Generate new credentials and a new keypair via AWS console.
 
-#### **STEP 7** - Send the new keypair to the affected user via Slack direct message and instruct them to update all references to their AWS keys, such as the ones in the *.bash_profile*. This action can be performed using the *setupnu.sh* shell script, available at [Nubank Github](https://github.com/nubank).
+#### **STEP 7** - Send the new keypair to the affected user via Slack direct message and instruct them to update all references to their AWS keys, like the ones in the *.bash_profile*. Such action can be performed using the *setupnu.sh* shell script, available at [Nubank Github](https://github.com/nubank).
 
 Refer to the [AWS Developer Guide](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) for further information about working with AWS credentials.
 
