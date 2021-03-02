@@ -31,7 +31,7 @@
 
 *"Your AWS permissions have been temporarily suspended pending an investigation into a possible compromise. Contact me if you have any questions and please keep the incident private until* the all clear *is given by Infosec."*
   
-#### ** STEP 4** - Send a message through the affected user’s Slack profile to their Tech/Eng Manager:
+#### **STEP 4** - Send a message through the affected user’s Slack profile to their Tech/Eng Manager:
 
 *"There has been wrongful activity using this engineer's AWS account. Please inform them that permissions associated with it have been temporarily blocked and direct them through further understanding the incident. Please advise them to keep the incident private until* the all clear *is given by Infosec."*
   
