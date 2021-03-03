@@ -43,6 +43,10 @@
 
 Refer to the [AWS Developer Guide](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) for further information about working with AWS credentials.
 
+## Sequence Diagram
+
+![diagram](https://aasitamk.github.io/aasita)
+
 ---
 
 # EXERCISE 2
@@ -88,7 +92,7 @@ public static void findNeedles(String haystack, String[] needles) {
 
 <br/>**POSSIBLE OUTPUTS:**
 
-* For **up to 5** needles searched, the output displays the number of ocurrances for each needle:
+* For **up to 5** needles searched, the output displays the number of occurrances in the haystack for each needle:
 <br/>`[needle_value]: [total_ocurrances]`
 
 * If **more than 5** needles are searched, the output displays the following error message:
