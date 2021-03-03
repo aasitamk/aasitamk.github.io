@@ -45,7 +45,7 @@ Refer to the [AWS Developer Guide](https://docs.aws.amazon.com/sdk-for-java/v1/d
 
 ## Sequence Diagram
 
-![diagram](https://aasitamk.github.io/diagram.xml)
+![diagram](https://aasitamk.github.io/diagram.png)
 
 ---
 
