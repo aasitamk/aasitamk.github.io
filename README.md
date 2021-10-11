@@ -57,7 +57,7 @@ Refer to the [AWS Developer Guide](https://docs.aws.amazon.com/sdk-for-java/v1/d
 
 API documentation for the `findNeedles` method.
 
-### Find Needles in a Haystack
+### Finding Needles in a Haystack
 
 The `findNeedles` method counts the number of occurrances of up to five specific words (*needles*) within a given text (*haystack*).
 
